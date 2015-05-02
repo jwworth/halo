@@ -13,20 +13,21 @@ func main() {
 	// Get players
 	players := os.Args[1:]
 
-	// Team size
+	// Shuffle the players
+	shuffledPlayers := shuffle(players)
+
+	// Calculate the midpoint of the players array
 	teamSize := (len(os.Args) / 2)
 
-	// Shuffle the array
-	shuffledArray := shuffle(players)
+	// Build teams
+	teamA := shuffledPlayers[0:teamSize]
+	teamB := shuffledPlayers[teamSize:len(shuffledPlayers)]
 
-	// Build the first team
-	teamA := shuffledArray[0:teamSize]
+	// Print teams
+	fmt.Println("\nHALO")
+	fmt.Println(strings.Repeat("-", 30))
 	fmt.Println("Team A:", teamA)
-
-	// Build the second team
-	teamB := shuffledArray[teamSize:len(shuffledArray)]
 	fmt.Println("Team B:", teamB)
-
 }
 
 // Source: https://www.socketloop.com/tutorials/golang-shuffle-strings-array
