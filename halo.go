@@ -13,11 +13,11 @@ func main() {
 	// Get players
 	players := os.Args[1:]
 
+	// Calculate the midpoint of the players array
+	teamSize := (len(players) / 2)
+
 	// Shuffle the players
 	shuffledPlayers := shuffle(players)
-
-	// Calculate the midpoint of the players array
-	teamSize := (len(os.Args) / 2)
 
 	// Build teams
 	teamA := shuffledPlayers[0:teamSize]
