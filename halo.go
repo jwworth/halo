@@ -1,9 +1,12 @@
 package main
 
-import "os"
-import "fmt"
-import "math/rand"
-import "time"
+import (
+	"fmt"
+	"math/rand"
+	"os"
+	"strings"
+	"time"
+)
 
 func main() {
 
