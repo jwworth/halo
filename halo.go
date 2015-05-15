@@ -23,6 +23,23 @@ func main() {
 	frontRoom := shuffledPlayers[0:teamSize]
 	backRoom := shuffledPlayers[teamSize:len(shuffledPlayers)]
 
+	// Define logo
+	logo :=
+		`
+	
+								         HRHRHRH
+							            HRHR       HRHRHRH
+HRH                              HRH             HRHRH           HR                 HRHRH
+HRH            HRHRH           HRHRHR            HRHRH                               HRHR   H
+HRH            HRHRH          HRHRHRHRH          HRHRH                    HRH         HRHRHRH
+HRHRHRHRHRHRHRHRHRHR         HRH   HRHRH         HRHRH                    HRH         HRHR
+HRHRHR         HRHRH       HRHR      HRHRH       HRHRH                               HRHR
+HRHR           HRHRH      HRHRHRHR    HRHRH      HRHRH           H                 HRHRH
+HRHR           HRHRH    HRHR            HRHRH    HRHRHRHRHRHRHRHRH              HRHRHR
+HRHR           HRHRH   HRHR              HRHRH   HRHRHRHRHRHRHRHRH        HRHRHRH
+
+`
+
 	// Define maps
 	halo_map := []string{
 		"asylum",
@@ -42,14 +59,13 @@ func main() {
 		"team swat",
 	}
 
-	// Print teams
-	fmt.Println("\nHALO")
+	// Print everything
+	fmt.Println(logo)
 	fmt.Println(strings.Repeat("-", 40))
 	fmt.Println("Front Room:", frontRoom)
 	fmt.Println("Back Room:", backRoom, "\n")
-
-	// Print starting conditions
 	fmt.Println("Starting with:", sample(halo_map), "-", sample(game_type))
+	fmt.Println(strings.Repeat("-", 40))
 }
 
 // Source: https://www.socketloop.com/tutorials/golang-shuffle-strings-array
