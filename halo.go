@@ -21,7 +21,7 @@ func main() {
 
 	// Build teams
 	frontRoom := shuffledPlayers[0:teamSize]
-	backRoom := shuffledPlayers[teamSize:len(shuffledPlayers)]
+	backRoom := shuffledPlayers[teamSize:len(players)]
 
 	// Define logo
 	logo :=
