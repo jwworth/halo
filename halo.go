@@ -52,6 +52,7 @@ HRHR           HRHRH   HRHR              HRHRH   HRHRHRHRHRHRHRHRH        HRHRHR
 
 	// Define game types
 	game_type := []string{
+		"capture the flag",
 		"oddball",
 		"slayer",
 		"swat",
